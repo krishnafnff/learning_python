@@ -32,7 +32,7 @@ for folder in CWD:
     if os.path.isdir(folder):
         
         if len(os.listdir(folder)) != 0:
-            
+            # make sure at the end working directory will be change to default
             WD = os.chdir(WORKINGDIR+'/'+folder)
 
             os.mkdir("Mixes")
@@ -56,23 +56,5 @@ for folder in CWD:
                 for file in ZipFiles:
                     shutil.move(file,'Mixes/ZipFiles')
             
-            os.chdir(WORKINGDIR)
+            os.chdir(WORKINGDIR) #like this
             
-            
-            
-
-
-# allFilelist = ZipFileChecker(os.listdir())
-# print(CWD)
-
-# os.mkdir("Mixes")
-# os.mkdir("Mixes/SrtFiles")
-# # os.mkdir(fname)
-# shutil.move('transCript (3rd copy).srt','Mixes/SrtFiles')
-
-# txt = os.getcwd() + "/folder2"
-
-# x = txt.split('/')
-# x[-1]
-
-# print(os.path.isdir('transCript.srt'))
